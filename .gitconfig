@@ -1,0 +1,21 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Yogesh Shahi
+	email = yogeshshahi120@gmail.com
+	signingkey = yogeshshahi120@gmail.com 
+# Please adapt and uncomment the following lines:
+#	name = Yogesh Shahi
+#	email = yogeshshahi120@gmail.com
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[init]
+	defaultBranch = main
+[credential]
+	helper = store
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[commit]
+	gpgsign = true
